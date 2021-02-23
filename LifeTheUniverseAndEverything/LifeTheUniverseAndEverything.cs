@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace LifeTheUniverseAndEverything {
-    public class Program {
+    public class LifeTheUniverseAndEverything {
         static void Main(string[] args) {
             Helpers.ConsoleHelper.RedirectInputToFile();
             while (true) {
