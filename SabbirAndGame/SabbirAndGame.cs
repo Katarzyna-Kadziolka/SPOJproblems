@@ -3,47 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace SabbirAndGame {
-    class SabbirAndGame {
+    public class SabbirAndGame {
         static void Main(string[] args) {
             Helpers.ConsoleHelper.RedirectInputToFile();
-            try {
-                int numberOfTests = Convert.ToInt32(Console.ReadLine());
-                List<long> minHpList = new List<long>();
-                for (int i = 0; i < numberOfTests; i++) {
-                    long numberOfHpChanges = Convert.ToInt32(Console.ReadLine());
-                    if (numberOfHpChanges == 0) {
-                        minHpList.Add(1);
-                        continue;
+
+            int numberOfTests = Convert.ToInt32(Console.ReadLine());
+            List<long> minHpList = new List<long>();
+
+
+            for (int i = 0; i < numberOfTests; i++) {
+                var numberOfChanges = Convert.ToInt32(Console.ReadLine());
+                string line = Console.ReadLine();
+                if (string.IsNullOrEmpty(line)) {
+                    break;
+                }
+                List<long> hpChanges = line.Split(" ").Select(a => Int64.Parse(a.Trim())).ToList();
+                long startHp = 0;
+                while (true) {
+                    var hp = startHp;
+                    foreach (var hpChange in hpChanges) {
+                        hp = hp + hpChange;
+                        if (hp <= 0) {
+                            startHp++;
+                            break;
+                        }
                     }
-                    List<long> hpChanges = Console.ReadLine()?.Split(" ")
-                        .Select(a => Convert.ToInt64(a))
-                        .ToList();
 
-                    var minHp = GetMinHp(hpChanges);
-                    minHpList.Add(minHp);
+                    if (hp > 0) {
+                        break;
+                    }
                 }
 
-                foreach (var hp in minHpList) {
-                    Console.WriteLine(hp);
-                }
+                minHpList.Add(startHp);
             }
 
-            catch (NullReferenceException e) {
-                Console.WriteLine(e);
-                throw;
+            foreach (var hp in minHpList) {
+                Console.WriteLine(hp);
             }
-        }
-        private static long GetMinHp(List<long> hpChanges, long startHp = 0) {
-            long hp = startHp;
-            foreach (var hpChange in hpChanges) {
-                hp = hp + hpChange;
-                if (hp <= 0) {
-                    startHp++;
-                    return GetMinHp(hpChanges, startHp);
-                }
-            }
-
-            return startHp;
         }
     }
 }
