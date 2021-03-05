@@ -14,6 +14,7 @@ namespace SortingBankAccounts {
                     accounts.Add(Console.ReadLine());
                 }
 
+
                 var sortedAccount = accounts.GroupBy(a => a)
                     .Select(a => $"{a.Key} {a.Count()}")
                     .OrderBy(a => a);
