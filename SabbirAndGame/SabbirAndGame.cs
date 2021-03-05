@@ -7,7 +7,7 @@ namespace SabbirAndGame {
         static void Main(string[] args) {
             Helpers.ConsoleHelper.RedirectInputToFile();
 
-            int numberOfTests = Convert.ToInt32(Console.ReadLine());
+            int numberOfTests = Convert.ToInt32(Console.ReadLine().Trim());
             List<long> minHpList = new List<long>();
 
 
