@@ -7,12 +7,12 @@ namespace SabbirAndGame {
         static void Main(string[] args) {
             Helpers.ConsoleHelper.RedirectInputToFile();
 
-            int numberOfTests = Convert.ToInt32(Console.ReadLine().Trim());
+            int numberOfTests = Convert.ToInt32(Console.ReadLine()?.Trim());
             List<long> minHpList = new List<long>();
 
 
             for (int i = 0; i < numberOfTests; i++) {
-                var numberOfChanges = Convert.ToInt32(Console.ReadLine());
+                Console.ReadLine();
                 string line = Console.ReadLine();
                 if (string.IsNullOrEmpty(line)) {
                     continue;
@@ -25,6 +25,7 @@ namespace SabbirAndGame {
                 if (hpChanges.All(a => a < 0)) {
                     minHpList.Add(Math.Abs(hpChanges.Sum()) + 1);
                 }
+                
                 else if (hpChanges.All(a => a > 0)) {
                     minHpList.Add(0);
                 }
@@ -40,19 +41,20 @@ namespace SabbirAndGame {
                         startOfRange++;
                     }
 
-                    List<long> answer = new List<long>();
+                    List<long> possibleAnswers = new List<long>();
                     while (true) {
                         if (range.Count == 0) {
+                            minHpList.Add(possibleAnswers.Min());
                             break;
                         }
 
                         var index = (range.Count / 2);
-                        var startHP = range[index];
-                        var hp = startHP;
+                        var startHp = range[index];
+                        var hp = startHp;
                         foreach (var hpChange in hpChanges) {
                             hp = hp + hpChange;
                             if (hp <= 0) {
-                                range = range.Where(a => a > startHP)
+                                range = range.Where(a => a > startHp)
                                     .Select(a => a)
                                     .ToList();
                                 break;
@@ -61,84 +63,13 @@ namespace SabbirAndGame {
 
 
                         if (hp > 0) {
-                            answer.AddRange(range.Where(a => a >= startHP)
-                                .Select(a => a)
-                                .ToList());
-                            range = range.Where(a => a < startHP)
+                            possibleAnswers.Add(startHp);
+                            range = range.Where(a => a < startHp)
                                 .Select(a => a)
                                 .ToList();
                         }
                     }
                 }
-
-
-                //if (hpChanges.All(a => a >= 0)) {
-                //    if (hpChanges.Sum() == 0) {
-                //        minHpList.Add(1);
-                //    }
-                //    else {
-                //        minHpList.Add(0);
-                //    }
-
-                //    continue;
-                //}
-
-                //if (hpChanges.All(a => a < 0)) {
-                //    minHpList.Add(Math.Abs(hpChanges.Sum())+1);
-                //    continue;
-                //}
-
-                //var minNumber = hpChanges.Min();
-                //var maxNumber = hpChanges.Max();
-                //List<long> range = new List<long>();
-                //var absoluteValue = Math.Abs(minNumber);
-                //while (minNumber < absoluteValue + 2) {
-                //    range.Add(minNumber);
-                //    minNumber++;
-                //}
-
-
-                //List<long> answer = new List<long>();
-                //while (true) {
-                //    if (range.Count == 0) {
-                //        break;
-                //    }
-
-                //    var index = (range.Count / 2);
-                //    var startHP = range[index];
-                //    var hp = startHP;
-                //    foreach (var hpChange in hpChanges) {
-                //        hp = hp + hpChange;
-                //        if (hp <= 0) {
-                //            range = range.Where(a => a > startHP)
-                //                .Select(a => a)
-                //                .ToList();
-                //            break;
-                //        }
-                //    }
-
-
-                //    if (hp > 0) {
-                //        answer.AddRange(range.Where(a => a >= startHP)
-                //            .Select(a => a)
-                //            .ToList());
-                //        range = range.Where(a => a < startHP)
-                //            .Select(a => a)
-                //            .ToList();
-                //    }
-                //}
-
-                //if (answer.Count > 0) {
-                //    minHpList.Add(answer.Min());
-                //}
-                //else {
-                //    if (minNumber > 0) {
-                //        minHpList.Add(0);
-                //    }
-                //    else {
-                //        minHpList.Add(Math.Abs(minNumber) + 1);
-                //    }
-                //}
             }
 
             foreach (var hp in minHpList) {
