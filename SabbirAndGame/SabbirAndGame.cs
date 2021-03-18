@@ -25,7 +25,7 @@ namespace SabbirAndGame {
                 if (hpChanges.All(a => a < 0)) {
                     minHpList.Add(Math.Abs(hpChanges.Sum()) + 1);
                 }
-                
+
                 else if (hpChanges.All(a => a > 0)) {
                     minHpList.Add(0);
                 }

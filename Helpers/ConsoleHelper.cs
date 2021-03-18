@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Helpers {
+namespace Helpers { 
     public class ConsoleHelper {
         public static void RedirectInputToFile() {
             FileInfo sourceFile = new FileInfo("Data.txt");
