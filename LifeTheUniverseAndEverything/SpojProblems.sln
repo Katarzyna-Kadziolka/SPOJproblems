@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingIntigers", "..\Adding
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum", "..\Sum\Sum.csproj", "{4A89F44E-0E32-46A8-9743-E39332855457}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleSum", "..\MultipleSum\MultipleSum.csproj", "{B7D632C3-3C6A-4748-A198-FE2260F9FC56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4A89F44E-0E32-46A8-9743-E39332855457}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A89F44E-0E32-46A8-9743-E39332855457}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A89F44E-0E32-46A8-9743-E39332855457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7D632C3-3C6A-4748-A198-FE2260F9FC56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D632C3-3C6A-4748-A198-FE2260F9FC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D632C3-3C6A-4748-A198-FE2260F9FC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D632C3-3C6A-4748-A198-FE2260F9FC56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
