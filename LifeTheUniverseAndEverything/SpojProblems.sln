@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SabbirAndGame", "..\SabbirA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTest", "..\PTest\PTest.csproj", "{CC0759BA-E413-469E-BDAF-32DF29DC26D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingIntigers", "..\AddingIntigers\AddingIntigers.csproj", "{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CC0759BA-E413-469E-BDAF-32DF29DC26D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC0759BA-E413-469E-BDAF-32DF29DC26D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC0759BA-E413-469E-BDAF-32DF29DC26D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
