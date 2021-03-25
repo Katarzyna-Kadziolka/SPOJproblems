@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace SabbirAndGame {
     public class SabbirAndGame {
-        static void Main(string[] args) {
+        static void Main() {
             Helpers.ConsoleHelper.RedirectInputToFile();
 
             int numberOfTests = Convert.ToInt32(Console.ReadLine()?.Trim());

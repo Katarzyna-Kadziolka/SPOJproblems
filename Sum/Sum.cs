@@ -2,7 +2,7 @@
 
 namespace Sum {
     public class Sum {
-        static void Main(string[] args) {
+        static void Main() {
             Helpers.ConsoleHelper.RedirectInputToFile();
             var newNum = Console.ReadLine();
             var sum = 0;

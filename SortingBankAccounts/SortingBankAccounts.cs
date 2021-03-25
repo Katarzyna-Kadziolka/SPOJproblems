@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace SortingBankAccounts {
     public class SortingBankAccounts {
-        static void Main(string[] args) {
+        static void Main() {
             Helpers.ConsoleHelper.RedirectInputToFile();
             int numberOfTests = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < numberOfTests; i++) {

@@ -11,15 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SortingBankAccounts", "..\S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SabbirAndGame", "..\SabbirAndGame\SabbirAndGame.csproj", "{0BEEC936-D891-4E45-9902-7E6F1C83B9CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTest", "..\PTest\PTest.csproj", "{CC0759BA-E413-469E-BDAF-32DF29DC26D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTest", "..\PTest\PTest.csproj", "{CC0759BA-E413-469E-BDAF-32DF29DC26D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddingIntigers", "..\AddingIntigers\AddingIntigers.csproj", "{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddingIntigers", "..\AddingIntigers\AddingIntigers.csproj", "{0F439F06-F156-49C0-B9AA-5CE0FAF043B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sum", "..\Sum\Sum.csproj", "{4A89F44E-0E32-46A8-9743-E39332855457}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sum", "..\Sum\Sum.csproj", "{4A89F44E-0E32-46A8-9743-E39332855457}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleSum", "..\MultipleSum\MultipleSum.csproj", "{B7D632C3-3C6A-4748-A198-FE2260F9FC56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultipleSum", "..\MultipleSum\MultipleSum.csproj", "{B7D632C3-3C6A-4748-A198-FE2260F9FC56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAdding", "..\SimpleAdding\SimpleAdding.csproj", "{A7A9AFA4-0F30-46D8-A0FA-987AB785685F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAdding", "..\SimpleAdding\SimpleAdding.csproj", "{A7A9AFA4-0F30-46D8-A0FA-987AB785685F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumbersBetween", "..\NumbersBetween\NumbersBetween.csproj", "{7EEB7EB9-A90B-479F-81B8-C0737A8F75DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{A7A9AFA4-0F30-46D8-A0FA-987AB785685F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7A9AFA4-0F30-46D8-A0FA-987AB785685F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7A9AFA4-0F30-46D8-A0FA-987AB785685F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EEB7EB9-A90B-479F-81B8-C0737A8F75DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EEB7EB9-A90B-479F-81B8-C0737A8F75DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EEB7EB9-A90B-479F-81B8-C0737A8F75DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EEB7EB9-A90B-479F-81B8-C0737A8F75DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

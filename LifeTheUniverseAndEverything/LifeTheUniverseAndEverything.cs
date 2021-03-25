@@ -2,7 +2,7 @@
 
 namespace LifeTheUniverseAndEverything {
     public class LifeTheUniverseAndEverything {
-        static void Main(string[] args) {
+        static void Main() {
             Helpers.ConsoleHelper.RedirectInputToFile();
             while (true) {
                 var number = Convert.ToInt32(Console.ReadLine());

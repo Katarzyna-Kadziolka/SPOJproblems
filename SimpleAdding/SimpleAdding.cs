@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace SimpleAdding {
     public class SimpleAdding {
-        static void Main(string[] args) {
+        static void Main() {
             Helpers.ConsoleHelper.RedirectInputToFile();
             var numOfTests = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < numOfTests; i++) {
