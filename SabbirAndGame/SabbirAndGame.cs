@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace SabbirAndGame {
     public class SabbirAndGame {
@@ -8,73 +8,59 @@ namespace SabbirAndGame {
             Helpers.ConsoleHelper.RedirectInputToFile();
 
             int numberOfTests = Convert.ToInt32(Console.ReadLine()?.Trim());
-            List<long> minHpList = new List<long>();
-
+            var sb = new StringBuilder();
 
             for (int i = 0; i < numberOfTests; i++) {
                 Console.ReadLine();
                 string line = Console.ReadLine();
-                if (string.IsNullOrEmpty(line)) {
-                    continue;
-                }
 
-
-                List<long> hpChanges = line.Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                    .Select(a => Int64.Parse(a.Trim())).ToList();
+                var hpChanges = Array.ConvertAll(line.Split(" ", StringSplitOptions.RemoveEmptyEntries), long.Parse);
 
                 if (hpChanges.All(a => a < 0)) {
-                    minHpList.Add(Math.Abs(hpChanges.Sum()) + 1);
+                    sb.AppendLine((Math.Abs(hpChanges.Sum()) + 1).ToString());
+                }
+                else if (hpChanges.All(a => a > 0)) {
+                    sb.AppendLine("0");
                 }
 
-                else if (hpChanges.All(a => a > 0)) {
-                    minHpList.Add(0);
-                }
-                else if (hpChanges.All(a => a == 0)) {
-                    minHpList.Add(1);
-                }
                 else {
                     var sumOfNegativeNumbers = hpChanges.Where(a => a < 0).Sum();
-                    var startOfRange = 0;
-                    var range = new List<long>();
-                    while (startOfRange <= Math.Abs(sumOfNegativeNumbers) + 1) {
-                        range.Add(startOfRange);
-                        startOfRange++;
-                    }
 
-                    List<long> possibleAnswers = new List<long>();
+
+                    long startOfRange = 0;
+                    var numberOfItemsInRange = Math.Abs(sumOfNegativeNumbers) + 1;
+
+                    long possibleAnswer = numberOfItemsInRange;
                     while (true) {
-                        if (range.Count == 0) {
-                            minHpList.Add(possibleAnswers.Min());
+                        if (numberOfItemsInRange == 0) {
+                            sb.AppendLine(possibleAnswer.ToString());
                             break;
                         }
 
-                        var index = (range.Count / 2);
-                        var startHp = range[index];
+                        var startHp = startOfRange + numberOfItemsInRange/2;
                         var hp = startHp;
                         foreach (var hpChange in hpChanges) {
                             hp = hp + hpChange;
                             if (hp <= 0) {
-                                range = range.Where(a => a > startHp)
-                                    .Select(a => a)
-                                    .ToList();
+                                startOfRange = startHp;
+                                numberOfItemsInRange = numberOfItemsInRange / 2;
                                 break;
                             }
                         }
 
 
                         if (hp > 0) {
-                            possibleAnswers.Add(startHp);
-                            range = range.Where(a => a < startHp)
-                                .Select(a => a)
-                                .ToList();
+                            if (startHp < possibleAnswer) {
+                                possibleAnswer = startHp;
+                            }
+
+                            numberOfItemsInRange = numberOfItemsInRange / 2;
                         }
                     }
                 }
             }
 
-            foreach (var hp in minHpList) {
-                Console.WriteLine(hp);
-            }
+            Console.WriteLine(sb);
         }
     }
 }
