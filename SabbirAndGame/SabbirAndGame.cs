@@ -36,7 +36,7 @@ namespace SabbirAndGame {
                     var sumOfNegativeNumbers = hpChanges.Where(a => a < 0).Sum();
                     var startOfRange = 0;
                     var range = new List<long>();
-                    while (startOfRange < Math.Abs(sumOfNegativeNumbers) + 2) {
+                    while (startOfRange <= Math.Abs(sumOfNegativeNumbers) + 1) {
                         range.Add(startOfRange);
                         startOfRange++;
                     }
