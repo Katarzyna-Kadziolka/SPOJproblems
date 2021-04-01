@@ -29,6 +29,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatternsOne", "..\PatternsO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithSequencesPartOne", "..\FunWithSequencesPartOne\FunWithSequencesPartOne.csproj", "{F9C92543-75FE-4D66-A67C-CCAFC0C00BED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FunWithSequences", "FunWithSequences", "{DB159161-C04C-42D4-9DC2-EED16A84F848}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithSequencesPartTwo", "..\FunWithSequencesPartTwo\FunWithSequencesPartTwo.csproj", "{CCFEA0B3-219C-4B7E-96EF-4189AB305DDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunWithSequencesPartThree", "..\FunWithSequencesPartThree\FunWithSequencesPartThree.csproj", "{CA0D7270-ECAD-4666-8C60-CE160898DE2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,9 +93,22 @@ Global
 		{F9C92543-75FE-4D66-A67C-CCAFC0C00BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9C92543-75FE-4D66-A67C-CCAFC0C00BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9C92543-75FE-4D66-A67C-CCAFC0C00BED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCFEA0B3-219C-4B7E-96EF-4189AB305DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCFEA0B3-219C-4B7E-96EF-4189AB305DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCFEA0B3-219C-4B7E-96EF-4189AB305DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCFEA0B3-219C-4B7E-96EF-4189AB305DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA0D7270-ECAD-4666-8C60-CE160898DE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0D7270-ECAD-4666-8C60-CE160898DE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0D7270-ECAD-4666-8C60-CE160898DE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0D7270-ECAD-4666-8C60-CE160898DE2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9C92543-75FE-4D66-A67C-CCAFC0C00BED} = {DB159161-C04C-42D4-9DC2-EED16A84F848}
+		{CCFEA0B3-219C-4B7E-96EF-4189AB305DDF} = {DB159161-C04C-42D4-9DC2-EED16A84F848}
+		{CA0D7270-ECAD-4666-8C60-CE160898DE2D} = {DB159161-C04C-42D4-9DC2-EED16A84F848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8597BE9F-1212-46A5-B743-03C210CCFC70}
