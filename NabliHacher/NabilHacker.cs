@@ -11,19 +11,19 @@ namespace NabilHacker {
                 var mainStack = new Stack<char>();
                 var helperStack = new Stack<char>();
                 foreach (var sign in code) {
-                    char trySign;
+                    char moveSign;
                     if (sign == '>') {
-                        if (helperStack.TryPop(out trySign)) {
-                            mainStack.Push(trySign);
+                        if (helperStack.TryPop(out moveSign)) {
+                            mainStack.Push(moveSign);
                         }
                     }
                     else if (sign == '<') {
-                        if (mainStack.TryPop(out trySign)) {
-                            helperStack.Push(trySign);
+                        if (mainStack.TryPop(out moveSign)) {
+                            helperStack.Push(moveSign);
                         }
                     }
                     else if (sign == '-') {
-                        mainStack.TryPop(out trySign);
+                        mainStack.TryPop(out moveSign);
                     }
                     else {
                         mainStack.Push(sign);
@@ -34,7 +34,7 @@ namespace NabilHacker {
                     helperStack.Push(c);
                 }
 
-                Console.WriteLine(string.Join("", helperStack));
+                Console.WriteLine(new string(helperStack.ToArray()));
 
                 numberOfCases--;
             }
