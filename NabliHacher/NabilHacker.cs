@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace NabilHacker {
     class NabilHacker {
@@ -12,40 +11,30 @@ namespace NabilHacker {
                 var mainStack = new Stack<char>();
                 var helperStack = new Stack<char>();
                 foreach (var sign in code) {
+                    char trySign;
                     if (sign == '>') {
-                        if (helperStack.Count == 0) {
-                            continue;
+                        if (helperStack.TryPop(out trySign)) {
+                            mainStack.Push(trySign);
                         }
-                        mainStack.Push(helperStack.Pop());
                     }
                     else if (sign == '<') {
-                        if (mainStack.Count == 0) {
-                            continue;
+                        if (mainStack.TryPop(out trySign)) {
+                            helperStack.Push(trySign);
                         }
-                        helperStack.Push(mainStack.Pop());
                     }
                     else if (sign == '-') {
-                        if (mainStack.Count == 0) {
-                            continue;
-                        }
-                        mainStack.Pop();
+                        mainStack.TryPop(out trySign);
                     }
                     else {
                         mainStack.Push(sign);
                     }
                 }
 
-                foreach (var c in helperStack) {
-                    mainStack.Push(c);
+                foreach (var c in mainStack) {
+                    helperStack.Push(c);
                 }
 
-                var reverseStack = new char[mainStack.Count];
-                for (int i = mainStack.Count - 1; i >= 0; i--) {
-                    reverseStack[i] = mainStack.Pop();
-                }
-
-                var answer = string.Join("", reverseStack);
-                Console.WriteLine(answer);
+                Console.WriteLine(string.Join("", helperStack));
 
                 numberOfCases--;
             }
