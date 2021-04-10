@@ -8,33 +8,33 @@ namespace NabilHacker {
             var numberOfCases = Convert.ToInt32(Console.ReadLine());
             while (numberOfCases != 0) {
                 var code = Console.ReadLine();
-                var mainStack = new Stack<char>();
-                var helperStack = new Stack<char>();
+                var incrementalStack = new Stack<char>();
+                var operationsStack = new Stack<char>();
                 foreach (var sign in code) {
                     char moveSign;
                     if (sign == '>') {
-                        if (helperStack.TryPop(out moveSign)) {
-                            mainStack.Push(moveSign);
+                        if (operationsStack.TryPop(out moveSign)) {
+                            incrementalStack.Push(moveSign);
                         }
                     }
                     else if (sign == '<') {
-                        if (mainStack.TryPop(out moveSign)) {
-                            helperStack.Push(moveSign);
+                        if (incrementalStack.TryPop(out moveSign)) {
+                            operationsStack.Push(moveSign);
                         }
                     }
                     else if (sign == '-') {
-                        mainStack.TryPop(out moveSign);
+                        incrementalStack.TryPop(out moveSign);
                     }
                     else {
-                        mainStack.Push(sign);
+                        incrementalStack.Push(sign);
                     }
                 }
 
-                foreach (var c in mainStack) {
-                    helperStack.Push(c);
+                foreach (var sign in incrementalStack) {
+                    operationsStack.Push(sign);
                 }
 
-                Console.WriteLine(new string(helperStack.ToArray()));
+                Console.WriteLine(new string(operationsStack.ToArray()));
 
                 numberOfCases--;
             }
