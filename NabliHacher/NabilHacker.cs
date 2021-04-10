@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NabilHacker {
     class NabilHacker {
@@ -8,8 +9,8 @@ namespace NabilHacker {
             var numberOfCases = Convert.ToInt32(Console.ReadLine());
             while (numberOfCases != 0) {
                 var code = Console.ReadLine();
-                var incrementalStack = new Stack<char>();
-                var operationsStack = new Stack<char>();
+                var incrementalStack = new Stack<char>(code.Length);
+                var operationsStack = new Stack<char>(code.Length);
                 foreach (var sign in code) {
                     char moveSign;
                     if (sign == '>') {
