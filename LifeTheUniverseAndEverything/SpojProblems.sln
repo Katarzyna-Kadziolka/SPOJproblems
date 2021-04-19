@@ -49,7 +49,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercisesFromLessons", "Exe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuadraticEquation", "..\QuadraticEquation\QuadraticEquation.csproj", "{8B01E409-EA78-4001-BB7A-D7C1D855A6DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedNumbers", "..\LedNumbers\LedNumbers.csproj", "{FB290CC4-A4C1-47BE-9049-FE1321BACB93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LedNumbers", "..\LedNumbers\LedNumbers.csproj", "{FB290CC4-A4C1-47BE-9049-FE1321BACB93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalLedNumber", "..\DigitalLedNumber\DigitalLedNumber.csproj", "{22EA1EC0-3B50-4281-9B42-9DF2D82C210A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +147,10 @@ Global
 		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EA1EC0-3B50-4281-9B42-9DF2D82C210A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EA1EC0-3B50-4281-9B42-9DF2D82C210A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EA1EC0-3B50-4281-9B42-9DF2D82C210A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EA1EC0-3B50-4281-9B42-9DF2D82C210A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
