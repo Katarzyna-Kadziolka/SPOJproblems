@@ -9,53 +9,26 @@ namespace FunWithSequencesPartFive {
             while (!string.IsNullOrEmpty(line)) {
                 var numbers = Array.ConvertAll(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries),
                     int.Parse);
-                string answer;
-                if (numbers.Length < 4) {
-                    answer = "No";
+                if (numbers.Length == 1) {
+                    Console.WriteLine("No");
+                    line = Console.ReadLine();
+                    continue;
                 }
-                else if (numbers.Length % 2 != 0) {
-                    var partOneLonger = numbers.Take(numbers.Length / 2 + 1).ToArray();
-                    var partTwoShorter = numbers.Skip(numbers.Length / 2 + 1).ToArray();
-                    var decreasingLonger = partOneLonger.OrderByDescending(a => a).ToArray();
-                    var increasingShorter = partTwoShorter.OrderBy(a => a).ToArray();
+                for (int i = 0; i < numbers.Length; i++) {
+                    var partDecreasing = numbers.Take(i + 1).ToArray();
+                    var partAscending = numbers.Skip(i + 1).ToArray();
+                    if (partDecreasing.SequenceEqual(partDecreasing.OrderByDescending(a => a).ToArray()) && partDecreasing.SequenceEqual(partDecreasing.Distinct().ToArray())) {
+                        if (partAscending.SequenceEqual(partAscending.OrderBy(a => a).ToArray()) && partAscending.SequenceEqual(partAscending.Distinct().ToArray())) {
+                            Console.WriteLine("Yes");
+                            break;
+                        }
+                    }
 
-                    var partOneShorter = numbers.Take(numbers.Length / 2).ToArray();
-                    var partTwoLonger = numbers.Skip(numbers.Length / 2).ToArray();
-                    var decreasingShorter = partOneShorter.OrderByDescending(a => a).ToArray();
-                    var increasingLonger = partTwoLonger.OrderBy(a => a).ToArray();
-
-                    if ((partOneLonger.SequenceEqual(decreasingLonger) &&
-                         partTwoShorter.SequenceEqual(increasingShorter) &&
-                         partOneLonger.Length == partOneLonger.Distinct().Count() &&
-                         partTwoShorter.Length == partTwoShorter.Distinct().Count()) ||
-                        (partOneShorter.SequenceEqual(decreasingShorter) &&
-                         partTwoLonger.SequenceEqual(increasingLonger) &&
-                         partOneShorter.Length == partOneShorter.Distinct().Count() &&
-                         partTwoLonger.Length == partTwoLonger.Distinct().Count())) {
-                        answer = "Yes";
-                    }
-                    else {
-                        answer = "No";
-                    }
-                }
-                else {
-                    var partOne = numbers.Take(numbers.Length / 2).ToArray();
-                    var partTwo = numbers.Skip(numbers.Length / 2).ToArray();
-                    var decreasing = partOne.OrderByDescending(a => a).ToArray();
-                    var increasing = partTwo.OrderBy(a => a).ToArray();
-                    if (partOne.SequenceEqual(decreasing) &&
-                        partTwo.SequenceEqual(increasing) &&
-                        partOne.Length == partOne.Distinct().Count() &&
-                        partTwo.Length == partTwo.Distinct().Count()) {
-                        answer = "Yes";
-                    }
-                    else {
-                        answer = "No";
+                    if (i == numbers.Length-1) {
+                        Console.WriteLine("No");
                     }
                 }
 
-
-                Console.WriteLine(answer);
                 line = Console.ReadLine();
             }
         }

@@ -43,7 +43,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithSequencesPartSix", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunWithSequencesPartSeven", "..\FunWithSequencesPartSeven\FunWithSequencesPartSeven.csproj", "{35CE74B6-BAB4-4C75-871D-B399A38D58B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NabliHacher", "..\NabliHacher\NabliHacher.csproj", "{E10584DA-B441-4DA2-9D59-E3DC4FA9D836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NabliHacher", "..\NabliHacher\NabliHacher.csproj", "{E10584DA-B441-4DA2-9D59-E3DC4FA9D836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExercisesFromLessons", "ExercisesFromLessons", "{D3AC9554-800F-46F9-91AF-04E0C9C61C3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuadraticEquation", "..\QuadraticEquation\QuadraticEquation.csproj", "{8B01E409-EA78-4001-BB7A-D7C1D855A6DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LedNumbers", "..\LedNumbers\LedNumbers.csproj", "{FB290CC4-A4C1-47BE-9049-FE1321BACB93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +137,14 @@ Global
 		{E10584DA-B441-4DA2-9D59-E3DC4FA9D836}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E10584DA-B441-4DA2-9D59-E3DC4FA9D836}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E10584DA-B441-4DA2-9D59-E3DC4FA9D836}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B01E409-EA78-4001-BB7A-D7C1D855A6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B01E409-EA78-4001-BB7A-D7C1D855A6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B01E409-EA78-4001-BB7A-D7C1D855A6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B01E409-EA78-4001-BB7A-D7C1D855A6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB290CC4-A4C1-47BE-9049-FE1321BACB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -143,6 +157,8 @@ Global
 		{01DF6624-1ABD-4EE9-82E7-AFED19855DF0} = {DB159161-C04C-42D4-9DC2-EED16A84F848}
 		{0AB19A3D-26F0-47D0-B2ED-5BA143DF991D} = {DB159161-C04C-42D4-9DC2-EED16A84F848}
 		{35CE74B6-BAB4-4C75-871D-B399A38D58B5} = {DB159161-C04C-42D4-9DC2-EED16A84F848}
+		{8B01E409-EA78-4001-BB7A-D7C1D855A6DA} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
+		{FB290CC4-A4C1-47BE-9049-FE1321BACB93} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8597BE9F-1212-46A5-B743-03C210CCFC70}
