@@ -1,0 +1,12 @@
+﻿a:1
+b:1
+c:1
+precision:3
+a:-1
+b:0
+c:1
+precision:9
+a:1
+b:2
+c:10
+precision:8
