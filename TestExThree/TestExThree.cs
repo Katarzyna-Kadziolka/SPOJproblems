@@ -10,13 +10,25 @@ namespace ExerciseThree {
             var lineThree = Console.ReadLine();
 
             if (TryConvert(lineOne) && TryConvert(lineTwo) && TryConvert(lineThree)) {
+                int numOne;
+                int numTwo;
+                int numThree;
                 try {
-                    int sum = checked(Convert.ToInt32(lineOne) + Convert.ToInt32(lineTwo) + Convert.ToInt32(lineThree));
-                    Console.WriteLine(sum);
+                    numOne = Convert.ToInt32(lineOne);
+                    numTwo = Convert.ToInt32(lineTwo);
+                    numThree = Convert.ToInt32(lineThree);
                 }
-                catch (OverflowException ) {
+                catch (OverflowException) {
                     Console.WriteLine("overflow exception, exit");
+                    return;
                 }
+                catch (Exception) {
+                    Console.WriteLine("non supported exception, exit");
+                    return;
+                }
+
+                var array = new int[3] {numOne, numTwo, numThree};
+                Console.WriteLine(array.Max() - array.Min());
             }
         }
 
@@ -25,25 +37,13 @@ namespace ExerciseThree {
                 Console.WriteLine("argument exception, exit");
                 return false;
             }
-            else if (!line.All(char.IsDigit)) {
+
+            if (!line.All(char.IsDigit)) {
                 Console.WriteLine("format exception, exit");
                 return false;
             }
-            else  {
-                try {
-                    var num = checked(Convert.ToInt32(line));
-                }
-                catch (OverflowException) {
-                    Console.WriteLine("overflow exception, exit");
-                    return false;
-                }
-                catch (Exception) {
-                    Console.WriteLine("non supported exception, exit");
-                    return false;
-                }
 
-                return true;
-            }
+            return true;
         }
     }
 }
