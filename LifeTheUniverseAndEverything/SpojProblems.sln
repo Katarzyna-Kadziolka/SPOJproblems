@@ -69,16 +69,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciseThree", "..\Exercis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciseFour", "..\ExerciseFour\ExerciseFour.csproj", "{2E46F9B4-9BE4-4715-A15D-8703DBCD22C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RkSorting", "..\RkSorting\RkSorting.csproj", "{B7060B70-2104-4863-A518-0EF46F0050EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RkSorting", "..\RkSorting\RkSorting.csproj", "{B7060B70-2104-4863-A518-0EF46F0050EE}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{14DE8615-9D3A-4594-9C2D-A797F73051F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExOne", "..\TestExOne\TestExOne.csproj", "{B67B3611-F14E-4A3B-A63E-EEB550A3E865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestExOne", "..\TestExOne\TestExOne.csproj", "{B67B3611-F14E-4A3B-A63E-EEB550A3E865}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExTwo", "..\TestExTwo\TestExTwo.csproj", "{68570111-7546-4F10-95D6-703EC0D39961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestExTwo", "..\TestExTwo\TestExTwo.csproj", "{68570111-7546-4F10-95D6-703EC0D39961}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExThree", "..\TestExThree\TestExThree.csproj", "{1A7D142F-BE35-42DC-A662-7D9A1081897A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestExThree", "..\TestExThree\TestExThree.csproj", "{1A7D142F-BE35-42DC-A662-7D9A1081897A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExFour", "..\TestExFour\TestExFour.csproj", "{DC856ACD-07D7-4322-B2CF-F38C3EC56135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestExFour", "..\TestExFour\TestExFour.csproj", "{DC856ACD-07D7-4322-B2CF-F38C3EC56135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time24h", "..\Time24h\Time24h.csproj", "{7459EC38-5BC4-4D43-997B-4970CD62564C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -226,6 +229,10 @@ Global
 		{DC856ACD-07D7-4322-B2CF-F38C3EC56135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC856ACD-07D7-4322-B2CF-F38C3EC56135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC856ACD-07D7-4322-B2CF-F38C3EC56135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
