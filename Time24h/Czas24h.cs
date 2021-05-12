@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Time24h {
     public class Czas24h {
@@ -9,19 +7,41 @@ namespace Time24h {
  
         public int Sekunda {
             get => liczbaSekund - Godzina * 60 * 60 - Minuta * 60;
-            set => liczbaSekund;
+            set {
+                if (value >= 0 && value <= 59) {
+                    liczbaSekund = liczbaSekund - Sekunda + value;
+                }
+                else {
+                    throw new ArgumentException();
+                }
+            } 
         }
     
  
         public int Minuta
         {
             get => (liczbaSekund / 60) % 60;
-            // uzupełnij kod - zdefiniuj setters'a
+            set {
+                if (value >= 0 && value <= 59) {
+                    liczbaSekund = liczbaSekund - Minuta * 60 + value * 60;
+                }
+                else {
+                    throw new ArgumentException();
+                }
+            }
         }
  
         public int Godzina
         {
             get => liczbaSekund / 3600;
+            set {
+                if (value >= 0 && value <= 23) {
+                    liczbaSekund = liczbaSekund - Godzina * 60 * 60 + value * 60 * 60;
+                }
+                else {
+                    throw new ArgumentException();
+                }
+            }
             // uzupełnij kod - zdefiniuj setters'a
         }
  

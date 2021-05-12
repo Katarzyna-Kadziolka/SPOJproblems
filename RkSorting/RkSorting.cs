@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace RkSorting {
     class RkSorting {
@@ -14,18 +13,14 @@ namespace RkSorting {
                 var maxNum = specifications[1];
                 var numbers = Array.ConvertAll(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries),
                     int.Parse);
-                List<int> answer = new List<int>();
-
-                for (int i = 0; i < numbers.Length; i++) {
-                    if (!answer.Contains(numbers[i])) {
-                        var numOfRepeats = numbers.Count(a => a == numbers[i]);
-                        for (int j = 0; j < numOfRepeats; j++) {
-                            answer.Add(numbers[i]);
-                        }
-                    }
+                var answer = numbers.GroupBy(a => a).OrderByDescending(a => a.Count());
+                var endAnswer = new List<int>();
+                foreach (var group in answer) {
+                    endAnswer.AddRange(group);
                 }
 
-                Console.WriteLine(string.Join(" ", answer));
+
+                Console.WriteLine(string.Join(" ", endAnswer));
                 line = Console.ReadLine();
             }
         }

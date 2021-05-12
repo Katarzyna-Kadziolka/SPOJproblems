@@ -3,6 +3,7 @@
 namespace Time24h {
     public class Program {
         static void Main(string[] args) {
+            Helpers.ConsoleHelper.RedirectInputToFile();
             string[] napis = null;
             Czas24h t = null;
 

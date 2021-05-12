@@ -3,7 +3,7 @@ using System.Text;
 
 namespace DigitalLedNumber {
     class DigitalLedNumber {
-        static void Main(string[] args) {
+        static void Main() {
             Helpers.ConsoleHelper.RedirectInputToFile();
             var firstLine = Console.ReadLine();
             while (!string.IsNullOrEmpty(firstLine)) {
