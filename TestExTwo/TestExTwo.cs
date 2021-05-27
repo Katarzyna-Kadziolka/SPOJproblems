@@ -36,12 +36,10 @@ namespace TestExTwo {
 
             var aMinusBdevidedByTwo = (double) (base1 - base2) / 2;
             var h = (double) Math.Pow(leg, 2) - Math.Pow(aMinusBdevidedByTwo, 2);
-            if ((decimal) Math.Sqrt(h) != leg) {
+            
+            if (Math.Abs(Math.Sqrt(h) - leg) > 0.0000001) {
                 throw new ArgumentException("object not exist");
             }
-            //if (Math.Abs(Math.Sqrt(h) - leg) > 0.0000001) {
-            //    throw new ArgumentException("object not exist");
-            //}
 
             var aPlusBDevidedByTwo = (double) (base1 + base2) / 2;
             double area = (double) (aPlusBDevidedByTwo * h);
