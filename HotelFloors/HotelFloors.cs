@@ -25,6 +25,11 @@ namespace HotelFloors
 
                     }
                 }
+                // czytasz po kolei każdy znak
+                // jeśli trafisz na - lub * sprawdzasz czy wokół nie są jakieś puste miejsca albo osoba (czy po prawo albo na dole 
+                // jeśli ma to daj to do tymczasowej listy do sprawdzenia
+                // jeśli nie ma to sprawdź miejsce z listy do sprawdzenia -> przejdź do kroku dwa i usuń z tymczasowej listy (ewentualnie oznacz jako sprawdzone)
+                // jeśli lista jest pusta zakończ pokój 
             }
         }
     }
