@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Channels;
 
 namespace HotelFloors
 {
@@ -12,10 +13,16 @@ namespace HotelFloors
                 var array = Array.ConvertAll(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries),
                     int.Parse);
                 var room = new char[array[0], array[1]];
-                for (int j = 0; j < array[0]; j++) {
+                int numOfPeople = 0;
+                int numOfRooms = 1;
+                for (int j = 0; j < array[0] - 1; j++) {
                     var line = Console.ReadLine();
-                    for (int k = 0; k < array[1]; k++) {
-                        room[j, k] = line[k];
+                    for (int k = 0; k < array[1] - 1; k++) {
+                        var sign = line[k];
+                        if (sign == '*') {
+                            numOfPeople += 1;
+                        }
+
                     }
                 }
             }
