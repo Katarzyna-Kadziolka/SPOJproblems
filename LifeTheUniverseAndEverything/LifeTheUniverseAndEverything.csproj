@@ -15,4 +15,13 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="BankAccount-PartOne\Program.cs">
+      <Link>BankAvccountPartOne\Program.cs</Link>
+    </Compile>
+    <Compile Update="BankAccount-PartOne\Properties\AssemblyInfo.cs">
+      <Link>BankAvccountPartOne\Properties\AssemblyInfo.cs</Link>
+    </Compile>
+  </ItemGroup>
+
 </Project>

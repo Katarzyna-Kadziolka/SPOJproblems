@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "..\Inheritan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Time24h", "..\Time24h\Time24h.csproj", "{7459EC38-5BC4-4D43-997B-4970CD62564C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountPartOne", "..\AccountPartOne\AccountPartOne.csproj", "{10D8A06D-126A-491E-97C6-A8CB2A3D99A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -239,6 +241,10 @@ Global
 		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7459EC38-5BC4-4D43-997B-4970CD62564C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -265,6 +271,7 @@ Global
 		{1A7D142F-BE35-42DC-A662-7D9A1081897A} = {14DE8615-9D3A-4594-9C2D-A797F73051F0}
 		{DC856ACD-07D7-4322-B2CF-F38C3EC56135} = {14DE8615-9D3A-4594-9C2D-A797F73051F0}
 		{815554E4-0112-4A53-A688-9CC6DF89256E} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
+		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8597BE9F-1212-46A5-B743-03C210CCFC70}
