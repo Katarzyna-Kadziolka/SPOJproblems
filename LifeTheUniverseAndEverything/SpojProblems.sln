@@ -91,6 +91,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementationOfASimplified
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogsAgregation", "..\LogsAgregation\LogsAgregation.csproj", "{8F9D2565-DEF4-4276-8828-1D81AD87C00C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountPartTwo", "..\AccountPartTwo\AccountPartTwo.csproj", "{B6958631-320E-47D4-A9AC-148902D9869A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -257,6 +259,10 @@ Global
 		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6958631-320E-47D4-A9AC-148902D9869A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6958631-320E-47D4-A9AC-148902D9869A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6958631-320E-47D4-A9AC-148902D9869A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6958631-320E-47D4-A9AC-148902D9869A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -286,6 +292,7 @@ Global
 		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 		{C2F7401E-3C49-4E6D-A19D-E86E18AF9AC3} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 		{8F9D2565-DEF4-4276-8828-1D81AD87C00C} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
+		{B6958631-320E-47D4-A9AC-148902D9869A} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8597BE9F-1212-46A5-B743-03C210CCFC70}
