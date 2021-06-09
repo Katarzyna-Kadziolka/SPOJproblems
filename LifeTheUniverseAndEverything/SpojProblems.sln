@@ -89,6 +89,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountPartOne", "..\Accoun
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImplementationOfASimplifiedGenericStack", "..\ImplementationOfASimplifiedGenericStack\ImplementationOfASimplifiedGenericStack.csproj", "{C2F7401E-3C49-4E6D-A19D-E86E18AF9AC3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogsAgregation", "..\LogsAgregation\LogsAgregation.csproj", "{8F9D2565-DEF4-4276-8828-1D81AD87C00C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -251,6 +253,10 @@ Global
 		{C2F7401E-3C49-4E6D-A19D-E86E18AF9AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2F7401E-3C49-4E6D-A19D-E86E18AF9AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2F7401E-3C49-4E6D-A19D-E86E18AF9AC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F9D2565-DEF4-4276-8828-1D81AD87C00C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -279,6 +285,7 @@ Global
 		{815554E4-0112-4A53-A688-9CC6DF89256E} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 		{10D8A06D-126A-491E-97C6-A8CB2A3D99A6} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 		{C2F7401E-3C49-4E6D-A19D-E86E18AF9AC3} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
+		{8F9D2565-DEF4-4276-8828-1D81AD87C00C} = {D3AC9554-800F-46F9-91AF-04E0C9C61C3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8597BE9F-1212-46A5-B743-03C210CCFC70}
