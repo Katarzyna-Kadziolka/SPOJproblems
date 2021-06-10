@@ -60,7 +60,7 @@ namespace ImplementationOfASimplifiedGenericStack {
                     throw new StosEmptyException();
                 }
 
-                return list[^1];
+                return list[list.Count - 1];
             }
         }
 
@@ -69,7 +69,7 @@ namespace ImplementationOfASimplifiedGenericStack {
                 throw new StosEmptyException();
             }
 
-            var valueToRemove = list[^1];
+            var valueToRemove = list[list.Count - 1];
             list.RemoveAt(list.Count - 1);
             return valueToRemove;
         }
