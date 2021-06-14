@@ -4,26 +4,22 @@ namespace AccountPartTwo {
     class Program {
         static void Main(string[] args) {
 
-            var john = new AccountPlus("John", initialBalance: 100.0m);
-            Console.WriteLine(john);
+            var account = new AccountPlus("John", initialBalance: 0, initialLimit: 0);
+            Console.WriteLine(account);
+            account.Withdrawal(10);
+            Console.WriteLine(account);
 
-            john.Withdrawal(-50.0m);
-            Console.WriteLine(john);
 
-            john.Withdrawal(50.0m);
-            Console.WriteLine(john);
-
-            john.Withdrawal(100.0m);
-            Console.WriteLine(john);
-
-            john.Withdrawal(10.0m);
-            Console.WriteLine(john);
-
-            john.Deposit(80.0m);
-            Console.WriteLine(john);
-
-            john.Deposit(-80.0m);
-            Console.WriteLine(john);
+            account.OneTimeDebetLimit = 50;
+            Console.WriteLine(account);
+            account.Withdrawal(0); // zerowa wypłata
+            Console.WriteLine(account);
+            account.Withdrawal(10); // wypłata w ramach debetu
+            Console.WriteLine(account);
+            account.Unblock(); // próba odblokowania konta
+            Console.WriteLine(account);
+            account.Deposit(10); // likwidacja debetu, zerowy bilans
+            Console.WriteLine(account);
         }
     }
 
@@ -106,7 +102,7 @@ namespace AccountPartTwo {
         public new bool IsBlocked { get; set; }
 
         public decimal OneTimeDebetLimit {
-            get => Math.Round(_oneTimeDebetLimit, 4) ;
+            get => Math.Round(_oneTimeDebetLimit, 4);
             set {
                 if (value > 0 && !IsBlocked) {
                     AvaibleFounds = AvaibleFounds - _oneTimeDebetLimit;
@@ -123,6 +119,7 @@ namespace AccountPartTwo {
             if (initialLimit < 0) {
                 initialLimit = 0.00m;
             }
+
             OneTimeDebetLimit = initialLimit;
             AvaibleFounds = initialBalance + initialLimit;
         }
@@ -132,7 +129,7 @@ namespace AccountPartTwo {
         }
 
         public new void Unblock() {
-            if (AvaibleFounds >= 0) {
+            if (AvaibleFounds >= OneTimeDebetLimit) {
                 IsBlocked = false;
             }
         }
@@ -145,27 +142,28 @@ namespace AccountPartTwo {
                 IsBlocked = true;
             }
 
-            base.Withdrawal(amount);
-
             return true;
         }
 
         public new bool Deposit(decimal amount) {
-            if (amount <= 0 || IsBlocked) return false;
+            if (amount <= 0) return false;
 
             AvaibleFounds = Math.Round(AvaibleFounds += amount, PRECISION);
-            if (AvaibleFounds - _oneTimeDebetLimit > 0) {
+            if (AvaibleFounds - _oneTimeDebetLimit >= 0) {
                 IsBlocked = false;
             }
-
-            base.Deposit(amount);
 
             return true;
         }
 
-        public override string ToString() =>
-            IsBlocked
-                ? $"Account name: {Name}, balance: {Balance:F2}, blocked, avaible founds: {AvaibleFounds:F}, limit: {OneTimeDebetLimit:F}"
-                : $"Account name: {Name}, balance: {Balance:F2}, avaible founds: {AvaibleFounds:F}, limit: {OneTimeDebetLimit:F}";
+        public override string ToString() {
+            var balance = AvaibleFounds - OneTimeDebetLimit;
+            if (balance < 0) {
+                balance = 0;
+            }
+            return IsBlocked
+                ? $"Account name: {Name}, balance: {balance:F2}, blocked, avaible founds: {AvaibleFounds:F}, limit: {OneTimeDebetLimit:F}"
+                : $"Account name: {Name}, balance: {balance:F2}, avaible founds: {AvaibleFounds:F}, limit: {OneTimeDebetLimit:F}";
+        }
     }
 }
